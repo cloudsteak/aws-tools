@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get the list of repository names
-repos=$(aws --profile saml ecr describe-repositories --output json --query 'repositories[].repositoryName' | jq -r '.[]')
+repos=$(aws ecr describe-repositories --output json --query 'repositories[].repositoryName' | jq -r '.[]')
 
 # Create the JSON file
 echo "[" >livecycle_policy.json
@@ -25,7 +25,7 @@ for repo in $repos; do
     num_items=$((num_items + 1))
     echo "$num_items/$num_repos. Checking repository: $repo"
     # Get the lifecycle policy for the repository
-    result=$(aws --profile saml \
+    result=$(aws \
         ecr get-lifecycle-policy \
         --repository-name "$repo" 2>/dev/null)
     
