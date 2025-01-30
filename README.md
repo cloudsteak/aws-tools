@@ -43,6 +43,8 @@ Tools for ECR (Elastic Container Registry).
 
 Get all ECR repositories and their lifecycle policies, then exportthe data to json and txt file.
 
+_Pre-requisites:_ You need to have the AWS CLI installed and configured. Additionally, you need to have the `jq` tool installed.
+
 ```bash
 cd ecr
 
