@@ -6,6 +6,7 @@ This repository collects useful scripts and solutions for AWS.
 
 - [Introduction](#introduction)
 - [Installation](#installation)
+- [Login to AWS](#login-to-aws)
 - [Usage](#usage)
 - [Tools](#tools)
   - [ECR](#ecr)
@@ -23,6 +24,10 @@ To get started, clone the repository to your local machine:
 ```bash
 git clone https://github.com/cloudsteak/aws-tools.git
 ```
+
+## Login to AWS
+
+Before using the tools, make sure you have the AWS CLI installed and configured. You can install the AWS CLI by following the instructions in the [AWS CLI User Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
 
 ## Usage
 
